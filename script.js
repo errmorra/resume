@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // Typing effect in header
-    const headerText = "IT Professional | Security Operations";
+    const headerText = "IT - Professional";
     const headerElement = document.querySelector("header p");
     let index = 0;
     
