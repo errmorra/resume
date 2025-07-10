@@ -1,88 +1,67 @@
-body {
-    font-family: Arial, sans-serif;
+/* Reset & Base */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
-    transition: background-color 0.3s, color 0.3s;
+    padding-bottom: 50px;
+}
+a {
+    color: #0077b5;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
 }
 
-body.dark-mode {
-    background-color: #121212;
-    color: #f4f4f4;
-}
-
+/* Header */
 header {
-    background: linear-gradient(135deg, #333, #555);
-    color: white;
-    padding: 20px;
+    background-color: #1e1e2f;
+    color: #fff;
+    padding: 2rem;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+header h1 {
+    margin-bottom: 0.5rem;
+}
+header p {
+    font-style: italic;
 }
 
+/* Navigation */
+nav {
+    background: #2e3a59;
+    padding: 0.5rem 0;
+}
 nav ul {
     list-style: none;
-    padding: 0;
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 2rem;
 }
-
-nav ul li {
-    display: inline;
-}
-
 nav ul li a {
     color: white;
-    text-decoration: none;
-    font-size: 18px;
+    font-weight: bold;
     transition: color 0.3s;
 }
-
 nav ul li a:hover {
-    color: #ffcc00;
+    color: #00bcd4;
 }
 
+/* Sections */
 section {
-    padding: 20px;
-    max-width: 800px;
-    margin: auto;
+    max-width: 900px;
+    margin: 2rem auto;
     background: white;
-    margin-top: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s, background 0.3s, color 0.3s;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
-
-body.dark-mode section {
-    background: #1e1e1e;
-    color: #f4f4f4;
+section h2 {
+    color: #2e3a59;
 }
-
-section:hover {
-    transform: scale(1.02);
-}
-
-h2 {
-    color: #333;
-    border-bottom: 2px solid #ffcc00;
-    display: inline-block;
-    padding-bottom: 5px;
-}
-
-body.dark-mode h2 {
-    color: #ffcc00;
-}
-
-footer {
-    text-align: center;
-    padding: 10px;
-    background: linear-gradient(135deg, #333, #555);
-    color: white;
-    margin-top: 20px;
-}
-
-body.dark-mode footer {
-    background: linear-gradient(135deg, #222, #444);
-}
-
