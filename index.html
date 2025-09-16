@@ -1,72 +1,544 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Eric Morales - Resume</title>
-    <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eric Morales | Cybersecurity Professional</title>
+    
+    <!-- Meta tags for SEO -->
+    <meta name="description" content="Eric Morales - Security-focused IT professional with hands-on experience in SOC environments, seeking to advance as a SOC Analyst or IT Risk/Compliance Associate.">
+    <meta name="keywords" content="Eric Morales, Cybersecurity, SOC Analyst, IT Risk, Compliance, Security Operations, SIEM, EDR, NIST, CIS controls, MITRE ATT&CK">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
 </head>
 <body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
+    
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+    
+    <!-- Header -->
     <header>
-        <h1>Eric Morales</h1>
-        <p>Security-Focused IT Professional | SOC Analyst</p>
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">Eric<span>Morales</span></a>
+                <ul class="nav-links">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#certifications">Certifications</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </nav>
+        </div>
     </header>
-
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
-    <section id="about">
-        <h2>About Me</h2>
-        <p>
-            Security-focused IT professional with hands-on experience in SOC environments. Skilled in SIEM monitoring,
-            EDR, log analysis, and incident response. Knowledgeable in NIST, CIS controls, and threat mitigation
-            strategies. Known for attention to detail, technical curiosity, and team-first attitude.
-        </p>
+    
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <canvas id="particles-canvas"></canvas>
+        <div class="container">
+            <div class="hero-content">
+                <h1>Eric Morales</h1>
+                <p>I'm a <span class="typing-element">Cybersecurity Professional</span></p>
+                <div class="hero-btns">
+                    <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                    <a href="#about" class="btn btn-outline">Learn More</a>
+                </div>
+            </div>
+        </div>
     </section>
-
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>SIEM, Log Analysis, Incident Response, EDR (CrowdStrike, Defender)</li>
-            <li>Threat Hunting, Vulnerability Management (Nessus, OpenVAS), IAM</li>
-            <li>Patch Management, Cyber Hygiene, Compliance (NIST, CIS)</li>
-            <li>Networking (Wireshark, Nmap, DNS, VPN), Firewall Management</li>
-            <li>IDS/IPS, Zero Trust Architecture, ELK, PowerShell, Bash</li>
-            <li>Windows Server, Linux, OPNSense, TheHive, Wazuh</li>
-        </ul>
+    
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text animate-on-scroll">
+                    <h3>Security-focused IT Professional</h3>
+                    <p>I am a security-focused IT professional with hands-on experience in Security Operations Center (SOC) environments, seeking to advance as a SOC Analyst or IT Risk/Compliance Associate. I have extensive experience in SIEM monitoring, EDR and incident response, with a strong understanding of NIST, CIS controls, and MITRE ATT&CK frameworks.</p>
+                    <p>I am recognized for my attention to detail, technical curiosity, and ability to balance end-user support with organizational security goals. My passion for cybersecurity drives me to continuously learn and improve my skills in this ever-evolving field.</p>
+                    <div class="about-info">
+                        <div class="info-item">
+                            <h4><i class="fas fa-envelope"></i> Email</h4>
+                            <p>emora3030@gmail.com</p>
+                        </div>
+                        <div class="info-item">
+                            <h4><i class="fas fa-phone"></i> Phone</h4>
+                            <p>469-888-0341</p>
+                        </div>
+                        <div class="info-item">
+                            <h4><i class="fas fa-graduation-cap"></i> Education</h4>
+                            <p>Bachelor of Applied Science (B.A.S.) in Cybersecurity — Expected 2026<br>
+                            Associate of Science (A.S.) in Cybersecurity — 2022<br>
+                            Collin College – McKinney, TX</p>
+                        </div>
+                    </div>
+                    <div class="about-social">
+                        <a href="https://linkedin.com/" target="_blank" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#portfolio" class="social-link"><i class="fas fa-briefcase"></i></a>
+                    </div>
+                </div>
+                <div class="about-image animate-on-scroll">
+                    <img src="https://images.unsplash.com/photo-1614064641938-3bbee52942c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80" alt="Cybersecurity Professional">
+                </div>
+            </div>
+        </div>
     </section>
-
-    <section id="projects">
-        <h2>Projects</h2>
-        <ul>
-            <li>
-                <strong>Home SOC Lab:</strong> Built a virtual SOC using Wazuh, TheHive, Kibana, and OPNSense. Simulated
-                attack scenarios (e.g., phishing, lateral movement), created custom alert rules, and documented incident
-                response workflows.
-            </li>
-            <li>
-                <strong>TryHackMe & Hack The Box:</strong> Completed dozens of labs covering penetration testing,
-                malware analysis, privilege escalation, and forensic analysis.
-            </li>
-        </ul>
+    
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="timeline">
+                <!-- IT Specialist -->
+                <div class="timeline-item left animate-on-scroll">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Jul 2023 – Present</div>
+                        <h3 class="timeline-title">IT Specialist</h3>
+                        <div class="timeline-company">Anna ISD – Anna, TX</div>
+                        <ul class="timeline-details">
+                            <li>Monitored and triaged alerts in Microsoft Sentinel and CrowdStrike Falcon, mapping events to MITRE ATT&CK techniques.</li>
+                            <li>Conducted vulnerability scans and coordinated remediation, reducing critical findings by 15%.</li>
+                            <li>Delivered quarterly security awareness training, improving phishing reporting by 40%.</li>
+                            <li>Documented SOC procedures, incident response playbooks, and compliance policies.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- IT Support Associate -->
+                <div class="timeline-item right animate-on-scroll">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Jun 2022 – Mar 2023</div>
+                        <h3 class="timeline-title">IT Support Associate</h3>
+                        <div class="timeline-company">Amazon – Dallas, TX</div>
+                        <ul class="timeline-details">
+                            <li>Handled Level 1 security alerts, including failed logins, phishing attempts, and suspicious activity.</li>
+                            <li>Deployed YubiKeys for MFA, securing access for 200+ users.</li>
+                            <li>Supported compliance audits by documenting access reviews and incident handling.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- IT Systems Technician -->
+                <div class="timeline-item left animate-on-scroll">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Dec 2020 – Feb 2022</div>
+                        <h3 class="timeline-title">IT Systems Technician</h3>
+                        <div class="timeline-company">Open Integration Consulting – Dallas, TX</div>
+                        <ul class="timeline-details">
+                            <li>Performed client-side security assessments, identifying misconfigurations and recommending best practices.</li>
+                            <li>Implemented endpoint hardening and MFA, improving client compliance with CIS benchmarks.</li>
+                            <li>Managed patch rollouts across Windows and Linux, reducing unpatched vulnerabilities by 30%.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-
-    <section id="contact">
-        <h2>Contact</h2>
-        <p id="email">emora3030@gmail.com</p>
-        <p>Phone: 469-888-0341</p>
-        <p><a href="https://www.linkedin.com/in/eric-morales-cyber" target="_blank">LinkedIn</a></p>
-        <p><a href="https://github.com/errmorra" target="_blank">GitHub</a></p>
-        <p><a href="https://errmorra.github.io/resume/" target="_blank">Portfolio</a></p>
+    
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-container">
+                <!-- Security Operations -->
+                <div class="skill-category animate-on-scroll">
+                    <h3>Security Operations (SecOps)</h3>
+                    <div class="skill-progress">
+                        <div class="skill-name">
+                            <span>SIEM (Microsoft Sentinel, ELK)</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress-bar" data-progress="90"></div>
+                        </div>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="skill-name">
+                            <span>Incident Detection & Response</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress-bar" data-progress="85"></div>
+                        </div>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="skill-name">
+                            <span>Log Analysis</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress-bar" data-progress="80"></div>
+                        </div>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="skill-name">
+                            <span>Vulnerability Management</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress-bar" data-progress="85"></div>
+                        </div>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="skill-name">
+                            <span>IAM & Patch Management</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress-bar" data-progress="75"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Networking & Infrastructure -->
+                <div class="skill-category animate-on-scroll">
+                    <h3>Networking & Infrastructure</h3>
+                    <div class="skill-progress">
+                        <div class="skill-name">
+                            <span>Firewall Management</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress-bar" data-progress="80"></div>
+                        </div>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="skill-name">
+                            <span>IDS/IPS</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress-bar" data-progress="75"></div>
+                        </div>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="skill-name">
+                            <span>Wireshark & Nmap</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress-bar" data-progress="85"></div>
+                        </div>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="skill-name">
+                            <span>TCP/IP & DNS</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress-bar" data-progress="90"></div>
+                        </div>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="skill-name">
+                            <span>VPN & Active Directory</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress-bar" data-progress="80"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tools & Platforms -->
+                <div class="skill-category animate-on-scroll">
+                    <h3>Tools & Platforms</h3>
+                    <div class="skill-progress">
+                        <div class="skill-name">
+                            <span>CrowdStrike Falcon</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress-bar" data-progress="85"></div>
+                        </div>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="skill-name">
+                            <span>Microsoft Defender for Endpoint</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress-bar" data-progress="80"></div>
+                        </div>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="skill-name">
+                            <span>Wazuh & Kibana</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress-bar" data-progress="75"></div>
+                        </div>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="skill-name">
+                            <span>PowerShell & Bash</span>
+                            <span>70%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress-bar" data-progress="70"></div>
+                        </div>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="skill-name">
+                            <span>Windows Server & Linux</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress-bar" data-progress="85"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-
-    <script src="script.js" defer></script>
+    
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Projects & Labs</h2>
+            <div class="projects-grid">
+                <!-- Home SOC Lab -->
+                <div class="project-card animate-on-scroll">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2034&q=80" alt="Home SOC Lab">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Home SOC Lab</h3>
+                        <p class="project-description">Built a virtual SOC using Wazuh, Kibana, Graylog and OPNSense. Simulated phishing and lateral movement attacks, created custom correlation rules, and documented response workflows.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Wazuh</span>
+                            <span class="project-tag">Kibana</span>
+                            <span class="project-tag">Graylog</span>
+                            <span class="project-tag">OPNSense</span>
+                        </div>
+                        <a href="#" class="btn btn-primary">View Project</a>
+                    </div>
+                    <div class="project-overlay">
+                        <div class="overlay-content">
+                            <h3>Home SOC Lab</h3>
+                            <p>Click to view details</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- TryHackMe & Hack The Box -->
+                <div class="project-card animate-on-scroll">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="TryHackMe & Hack The Box">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">TryHackMe & Hack The Box</h3>
+                        <p class="project-description">Completed 50+ labs on penetration testing, malware analysis, privilege escalation, and digital forensics. Developed practical skills in ethical hacking and security assessment.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Penetration Testing</span>
+                            <span class="project-tag">Malware Analysis</span>
+                            <span class="project-tag">Digital Forensics</span>
+                        </div>
+                        <a href="#" class="btn btn-primary">View Project</a>
+                    </div>
+                    <div class="project-overlay">
+                        <div class="overlay-content">
+                            <h3>TryHackMe & Hack The Box</h3>
+                            <p>Click to view details</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Security Awareness Training -->
+                <div class="project-card animate-on-scroll">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80" alt="Security Awareness Training">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Security Awareness Training</h3>
+                        <p class="project-description">Developed and delivered comprehensive security awareness training programs that improved phishing reporting by 40% and reduced security incidents related to user behavior.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Security Awareness</span>
+                            <span class="project-tag">Phishing Prevention</span>
+                            <span class="project-tag">Training</span>
+                        </div>
+                        <a href="#" class="btn btn-primary">View Project</a>
+                    </div>
+                    <div class="project-overlay">
+                        <div class="overlay-content">
+                            <h3>Security Awareness Training</h3>
+                            <p>Click to view details</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications">
+        <div class="container">
+            <h2 class="section-title">Certifications</h2>
+            <div class="cert-container">
+                <!-- CompTIA CySA+ -->
+                <div class="cert-card animate-on-scroll">
+                    <div class="cert-front">
+                        <div class="cert-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 class="cert-title">CompTIA CySA+</h3>
+                        <p class="cert-issuer">CompTIA</p>
+                    </div>
+                    <div class="cert-back">
+                        <h3>CompTIA CySA+</h3>
+                        <p>Cybersecurity Analyst certification validating security analytics and operations skills.</p>
+                        <p>Click to flip card</p>
+                    </div>
+                </div>
+                
+                <!-- CompTIA Security+ -->
+                <div class="cert-card animate-on-scroll">
+                    <div class="cert-front">
+                        <div class="cert-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <h3 class="cert-title">CompTIA Security+</h3>
+                        <p class="cert-issuer">CompTIA</p>
+                    </div>
+                    <div class="cert-back">
+                        <h3>CompTIA Security+</h3>
+                        <p>Foundational certification covering essential security concepts and best practices.</p>
+                        <p>Click to flip card</p>
+                    </div>
+                </div>
+                
+                <!-- CompTIA Network+ -->
+                <div class="cert-card animate-on-scroll">
+                    <div class="cert-front">
+                        <div class="cert-icon">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <h3 class="cert-title">CompTIA Network+</h3>
+                        <p class="cert-issuer">CompTIA</p>
+                    </div>
+                    <div class="cert-back">
+                        <h3>CompTIA Network+</h3>
+                        <p>Certification validating networking concepts, infrastructure, and troubleshooting skills.</p>
+                        <p>Click to flip card</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-container">
+                <div class="contact-info animate-on-scroll">
+                    <h3>Contact Information</h3>
+                    <ul class="contact-details">
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>emora3030@gmail.com</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>469-888-0341</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Dallas, Texas Area</span>
+                        </li>
+                    </ul>
+                    <h3>Connect With Me</h3>
+                    <div class="social-links">
+                        <a href="https://linkedin.com/" target="_blank" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link"><i class="fas fa-briefcase"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form animate-on-scroll">
+                    <h3>Send Me a Message</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                    <div class="form-message"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Eric<span>Morales</span></div>
+                <p>Security-focused IT professional with hands-on experience in SOC environments.</p>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#certifications">Certifications</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="footer-social">
+                    <a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fas fa-briefcase"></i></a>
+                </div>
+                <p class="copyright">&copy; 2025 Eric Morales. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Dark Mode Toggle -->
+    <div class="dark-mode-toggle">
+        <i class="fas fa-moon"></i>
+    </div>
+    
+    <!-- Scroll to Top Button -->
+    <div class="scroll-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+    
+    <!-- Custom JavaScript -->
+    <script src="js/main.js"></script>
 </body>
 </html>
-
