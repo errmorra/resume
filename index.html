@@ -67,6 +67,7 @@
     background: var(--bg);
     color: var(--green);
     font-family: 'Share Tech Mono', monospace;
+    font-size: 1.05rem;
     overflow-x: hidden;
     cursor: none;
   }
@@ -245,7 +246,7 @@
   .status-bar {
     display: flex;
     gap: 24px;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     color: var(--green-dim);
     flex-wrap: wrap;
     justify-content: center;
@@ -274,12 +275,17 @@
   .t-red { background: var(--red); }
   .t-yellow { background: var(--yellow); }
   .t-green { background: var(--green); }
-  .terminal-title { margin-left: auto; margin-right: auto; font-size: 0.75rem; color: var(--green-dim); }
+  .terminal-title { margin-left: auto; margin-right: auto; font-size: 0.85rem; color: var(--green-dim); }
   .terminal-body {
     padding: 20px;
-    font-size: 0.9rem;
+    font-size: 1.05rem;
     line-height: 1.8;
     min-height: 120px;
+  }
+  .terminal-hint {
+    color: var(--green-dim);
+    font-size: 0.95rem;
+    margin-bottom: 12px;
   }
   .prompt { color: var(--cyan); }
   .cmd { color: var(--yellow); }
@@ -367,7 +373,7 @@
   .exp-bullets { list-style: none; padding: 0; }
   .exp-bullets li {
     color: var(--text);
-    font-size: 0.88rem;
+    font-size: 0.95rem;
     line-height: 1.7;
     padding-left: 16px;
     position: relative;
@@ -524,7 +530,7 @@
     outline: none;
     color: var(--yellow);
     font-family: 'Share Tech Mono', monospace;
-    font-size: 0.9rem;
+    font-size: 1.05rem;
     flex: 1;
     caret-color: var(--green);
   }
@@ -738,8 +744,22 @@
   body.pro .glitch { animation: none; }
   body.pro .section-title { color: #16232c; text-shadow: none; }
   body.pro .section-tag { color: var(--cyan); border-color: var(--cyan); }
-  body.pro .terminal-box { box-shadow: 0 6px 24px rgba(20,40,60,0.08); }
-  body.pro .terminal-header { background: #eef2f5; }
+  body.pro .terminal-box {
+    box-shadow: 0 6px 24px rgba(20,40,60,0.08);
+    /* Neon terminal palette — stands out from the light recruiter page */
+    --green: #39ff14;
+    --green-dim: #2ed10f;
+    --green-glow: rgba(57,255,20,0.35);
+    --cyan: #00e5ff;
+    --yellow: #ffee00;
+    --text: #c8ffc8;
+    --red: #ff4444;
+  }
+  body.pro .terminal-header { background: #0a1a0a; }
+  body.pro .terminal-body,
+  body.pro #terminal-input {
+    font-family: 'Share Tech Mono', monospace;
+  }
   body.pro .project-scan { display: none; }
   body.pro .metric-value { text-shadow: none; }
   body.pro .exp-bullets strong { color: #0b5cad; }
@@ -1169,7 +1189,7 @@
         <span class="terminal-title">eric@portfolio ~ — bash — 80x24</span>
       </div>
       <div class="terminal-body">
-        <div style="color:var(--green-dim); font-size:0.8rem; margin-bottom:12px;">
+        <div class="terminal-hint">
           Type <span style="color:var(--yellow)">help</span> for available commands. Try: <span style="color:var(--cyan)">whoami</span>, <span style="color:var(--cyan)">skills</span>, <span style="color:var(--cyan)">contact</span>, <span style="color:var(--cyan)">projects</span>, <span style="color:var(--cyan)">hack</span>
         </div>
         <div id="terminal-output"></div>
