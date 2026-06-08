@@ -3,9 +3,47 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ERIC MORALES // SOC ANALYST</title>
+<title>Eric Morales — SOC / GRC Analyst | Cybersecurity</title>
+
+<!-- ── SEO ── -->
+<meta name="description" content="Eric Morales — Cybersecurity specialist with 4+ years in SIEM monitoring, EDR, and incident response. Microsoft Sentinel, CrowdStrike Falcon, Python security tooling. Seeking a SOC Analyst or GRC Analyst role.">
+<meta name="keywords" content="SOC Analyst, GRC Analyst, Cybersecurity, Microsoft Sentinel, CrowdStrike Falcon, Incident Response, MITRE ATT&CK, CompTIA CySA+, Security+, Network+, Eric Morales">
+<meta name="author" content="Eric Morales">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#020c02">
+<link rel="canonical" href="https://errmorra.github.io/">
+
+<!-- ── Open Graph / Social ── -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Eric Morales — SOC / GRC Analyst">
+<meta property="og:description" content="Cybersecurity specialist with 4+ years in SIEM, EDR, and incident response. Builder of open-source security tooling.">
+<meta property="og:url" content="https://errmorra.github.io/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Eric Morales — SOC / GRC Analyst">
+<meta name="twitter:description" content="Cybersecurity specialist with 4+ years in SIEM, EDR, and incident response.">
+
+<!-- ── Structured data (helps recruiter tooling & search) ── -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Eric Morales",
+  "jobTitle": "Cybersecurity Specialist (SOC / GRC Analyst)",
+  "email": "mailto:emora3030@gmail.com",
+  "address": { "@type": "PostalAddress", "addressLocality": "Celina", "addressRegion": "TX", "addressCountry": "US" },
+  "url": "https://errmorra.github.io/",
+  "sameAs": [
+    "https://www.linkedin.com/in/eric-morales-cyber/",
+    "https://github.com/errmorra"
+  ],
+  "memberOf": { "@type": "Organization", "name": "ISACA — North Texas Chapter" },
+  "alumniOf": { "@type": "CollegeOrUniversity", "name": "Collin College" },
+  "hasCredential": ["CompTIA CySA+", "CompTIA Security+", "CompTIA Network+"]
+}
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&family=VT323&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&family=VT323&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
     --green: #00ff41;
@@ -579,12 +617,189 @@
     96% { text-shadow: none; }
   }
 
+  /* ── IMPACT METRICS ── */
+  .metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 16px;
+  }
+  .metric-card {
+    border: 1px solid var(--border);
+    background: var(--bg2);
+    padding: 22px 16px;
+    text-align: center;
+    transition: all 0.3s;
+  }
+  .metric-card:hover {
+    border-color: var(--green);
+    box-shadow: 0 0 24px var(--green-dark);
+    transform: translateY(-3px);
+  }
+  .metric-value {
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    font-weight: 900;
+    color: var(--green);
+    text-shadow: 0 0 16px var(--green-glow);
+    line-height: 1.1;
+  }
+  .metric-label {
+    font-size: 0.72rem;
+    color: var(--green-dim);
+    margin-top: 8px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    line-height: 1.4;
+  }
+
+  /* ── CONTROL DOCK (theme toggle + résumé) ── */
+  #control-dock {
+    position: fixed;
+    top: 16px; left: 16px;
+    z-index: 600;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .ctrl-btn {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+    color: var(--green);
+    background: rgba(2,12,2,0.85);
+    border: 1px solid var(--green-dim);
+    padding: 8px 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    text-decoration: none;
+    border-radius: 3px;
+    backdrop-filter: blur(4px);
+  }
+  .ctrl-btn:hover {
+    border-color: var(--green);
+    box-shadow: 0 0 14px var(--green-dark);
+    color: #000;
+    background: var(--green);
+  }
+  #copy-toast {
+    position: fixed;
+    bottom: 24px; left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    background: var(--green);
+    color: #000;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.78rem;
+    padding: 10px 22px;
+    border-radius: 4px;
+    z-index: 9500;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s;
+    box-shadow: 0 0 24px var(--green-glow);
+  }
+  #copy-toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+  /* ════════════════════════════════════════════════
+     RECRUITER / PROFESSIONAL MODE  (body.pro)
+     A clean, light, scan-friendly theme for hiring managers.
+     ════════════════════════════════════════════════ */
+  body.pro {
+    --green: #0b7285;
+    --green-dim: #5f7d8c;
+    --green-dark: rgba(11,114,133,0.12);
+    --green-glow: rgba(11,114,133,0.18);
+    --cyan: #0b5cad;
+    --yellow: #b45309;
+    --red: #c0392b;
+    --bg: #f4f6f8;
+    --bg2: #ffffff;
+    --border: #d9e0e6;
+    --text: #25323c;
+    color: var(--text);
+    background: var(--bg);
+    cursor: auto;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  body.pro #cursor, body.pro #cursor-dot { display: none; }
+  body.pro::before { display: none; }            /* no CRT scanlines */
+  body.pro #matrix-bg { display: none; }          /* no matrix rain */
+  body.pro .hero-name {
+    color: #16232c;
+    text-shadow: none;
+    animation: none;
+    letter-spacing: 0.04em;
+  }
+  body.pro .ascii-art { display: none; }
+  body.pro .hero-title { color: var(--cyan); letter-spacing: 0.18em; }
+  body.pro .glitch { animation: none; }
+  body.pro .section-title { color: #16232c; text-shadow: none; }
+  body.pro .section-tag { color: var(--cyan); border-color: var(--cyan); }
+  body.pro .terminal-box { box-shadow: 0 6px 24px rgba(20,40,60,0.08); }
+  body.pro .terminal-header { background: #eef2f5; }
+  body.pro .project-scan { display: none; }
+  body.pro .metric-value { text-shadow: none; }
+  body.pro .exp-bullets strong { color: #0b5cad; }
+  body.pro footer a, body.pro .nav-link { color: var(--green-dim); }
+  body.pro .hero-links a:hover { color: #fff; }
+  body.pro .ctrl-btn { background: #fff; color: var(--cyan); }
+  body.pro .ctrl-btn:hover { background: var(--cyan); color: #fff; }
+  body.pro .cert-badge::before { color: var(--cyan); text-shadow: none; }
+  body.pro .skill-tag:hover { background: var(--cyan); border-color: var(--cyan); color: #fff; }
+
+  /* ── REDUCED MOTION (accessibility) ── */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
+    .project-scan, .dot { display: none; }
+  }
+
   /* ── RESPONSIVE ── */
   @media (max-width: 600px) {
     .skills-grid { grid-template-columns: 1fr; }
     .projects-grid { grid-template-columns: 1fr; }
     nav { display: none; }
+    #control-dock { top: auto; bottom: 12px; left: 50%; transform: translateX(-50%); }
   }
+
+  /* ════════════════════════════════════════════════
+     PRINT  —  clean one-page professional résumé
+     ════════════════════════════════════════════════ */
+  @media print {
+    @page { margin: 14mm; }
+    body {
+      background: #fff !important;
+      color: #111 !important;
+      cursor: auto !important;
+      font-family: 'Inter', Georgia, serif;
+      font-size: 11pt;
+    }
+    body::before, #matrix-bg, #cursor, #cursor-dot,
+    nav, #control-dock, #boot-screen, .project-scan,
+    #terminal, #copy-toast, .hero-links, .status-bar,
+    .ascii-art { display: none !important; }
+    section { padding: 10px 0 !important; border-color: #ccc !important; page-break-inside: avoid; }
+    .container { max-width: 100% !important; padding: 0 !important; }
+    .hero-name { color: #000 !important; text-shadow: none !important; animation: none !important; font-size: 26pt !important; }
+    .section-title, .exp-company, .project-name, .skill-group-title, .edu-school { color: #000 !important; text-shadow: none !important; }
+    .section-tag { color: #444 !important; border-color: #444 !important; }
+    .exp-bullets strong { color: #000 !important; }
+    .exp-bullets li, .project-desc, .edu-degree, .output, .metric-label { color: #222 !important; }
+    .metric-value { color: #000 !important; text-shadow: none !important; }
+    a { color: #000 !important; text-decoration: none !important; }
+    #hero { min-height: 0 !important; padding: 0 0 12px !important; text-align: left; align-items: flex-start; }
+    .glitch { animation: none !important; }
+    .skill-tag { color: #000 !important; border-color: #999 !important; background: #fff !important; }
+    #print-summary { display: block !important; }
+  }
+  #print-summary { display: none; }
 </style>
 </head>
 <body>
@@ -593,9 +808,20 @@
 <div id="cursor-dot"></div>
 <canvas id="matrix-bg"></canvas>
 
+<!-- CONTROL DOCK -->
+<div id="control-dock">
+  <button class="ctrl-btn" id="theme-toggle" title="Switch between hacker and recruiter-friendly views" aria-label="Toggle theme">
+    <span id="theme-icon">🛡</span><span id="theme-label">RECRUITER MODE</span>
+  </button>
+  <button class="ctrl-btn" id="resume-btn" title="Print or save résumé as PDF">⬇ RÉSUMÉ</button>
+  <button class="ctrl-btn" id="copy-email-btn" title="Copy email to clipboard">✉ COPY EMAIL</button>
+</div>
+<div id="copy-toast">COPIED ✓</div>
+
 <!-- NAV -->
 <nav>
   <a href="#hero" class="nav-link">HOME</a>
+  <a href="#impact" class="nav-link">IMPACT</a>
   <a href="#summary" class="nav-link">SUMMARY</a>
   <a href="#experience" class="nav-link">EXP</a>
   <a href="#projects" class="nav-link">PROJECTS</a>
@@ -622,18 +848,42 @@
 ╚══════╝╚═╝  ╚═╝╚═╝ ╚═════╝    ╚═╝     ╚═╝ ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝</pre>
 
     <h1 class="hero-name">ERIC MORALES</h1>
+    <div class="hero-title">SOC Analyst · GRC Analyst · Cybersecurity</div>
+
+    <!-- visible only when printing / saving as PDF -->
+    <p id="print-summary">Cybersecurity specialist with 4+ years protecting environments, currently delivering IT and security support for a K-12 school district — running daily alert triage in Microsoft Sentinel and CrowdStrike Falcon, building detection tooling in Python, and owning the full incident response lifecycle from initial alert to post-incident review. North Texas ISACA member since 2025. Seeking a SOC Analyst or GRC Analyst role.<br>emora3030@gmail.com · Celina, TX · linkedin.com/in/eric-morales-cyber · github.com/errmorra</p>
+
     <div class="hero-links">
       <a href="mailto:emora3030@gmail.com">✉ EMAIL</a>
-      <a href="https://www.linkedin.com/in/eric-morales-cyber/" target="_blank">⬡ LINKEDIN</a>
-      <a href="https://github.com/errmorra" target="_blank">⌥ GITHUB</a>
-      <a href="https://errmorra.github.io/resume/" target="_blank">◈ PORTFOLIO</a>
+      <a href="https://www.linkedin.com/in/eric-morales-cyber/" target="_blank" rel="noopener">⬡ LINKEDIN</a>
+      <a href="https://github.com/errmorra" target="_blank" rel="noopener">⌥ GITHUB</a>
+      <a href="#" id="hero-resume" >◈ DOWNLOAD RÉSUMÉ</a>
     </div>
 
     <div class="status-bar">
-      <span><span class="dot"></span>SYSTEM ONLINE</span>
+      <span><span class="dot"></span>OPEN TO WORK</span>
       <span>📍 Celina, TX</span>
       <span>⚡ 4+ YRS EXPERIENCE</span>
-      <span>🛡 CLEARANCE: AUTHORIZED</span>
+      <span>🎖 ISACA MEMBER · 3× COMPTIA</span>
+    </div>
+  </div>
+</section>
+
+<!-- IMPACT METRICS -->
+<section id="impact" style="padding-top:60px; padding-bottom:60px;">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">01</span>
+      <h2 class="section-title glitch">IMPACT BY THE NUMBERS</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="metrics-grid">
+      <div class="metric-card"><div class="metric-value" data-count="4" data-suffix="+">0</div><div class="metric-label">Years in Cybersecurity</div></div>
+      <div class="metric-card"><div class="metric-value" data-count="500" data-suffix="+">0</div><div class="metric-label">Staff Security-Trained</div></div>
+      <div class="metric-card"><div class="metric-value" data-count="35" data-suffix="%">0</div><div class="metric-label">Phishing Report Rate ↑</div></div>
+      <div class="metric-card"><div class="metric-value" data-count="5" data-suffix="">0</div><div class="metric-label">Open-Source Security Tools</div></div>
+      <div class="metric-card"><div class="metric-value" data-count="110" data-suffix="">0</div><div class="metric-label">NIST 800-171 Controls Mapped</div></div>
+      <div class="metric-card"><div class="metric-value" data-count="3" data-suffix="×">0</div><div class="metric-label">CompTIA Certifications</div></div>
     </div>
   </div>
 </section>
@@ -642,7 +892,7 @@
 <section id="summary">
   <div class="container">
     <div class="section-header">
-      <span class="section-tag">01</span>
+      <span class="section-tag">02</span>
       <h2 class="section-title glitch">PROFILE LOADED</h2>
       <div class="section-line"></div>
     </div>
@@ -665,21 +915,19 @@
 <section id="experience">
   <div class="container">
     <div class="section-header">
-      <span class="section-tag">02</span>
+      <span class="section-tag">03</span>
       <h2 class="section-title glitch">OPERATION HISTORY</h2>
       <div class="section-line"></div>
     </div>
 
     <div class="exp-item">
-      <div class="exp-company">ANNA ISD</div>
-      <div class="exp-role">IT Specialist — Security Focus</div>
+      <div class="exp-company">ANNA INDEPENDENT SCHOOL DISTRICT</div>
+      <div class="exp-role">IT Specialist / Cybersecurity Specialist</div>
       <div class="exp-date">[2023-07 → PRESENT] // Anna, TX</div>
       <ul class="exp-bullets">
-        <li>Monitor and triage security alerts using <strong>Microsoft Sentinel (SIEM)</strong> and <strong>CrowdStrike Falcon (EDR)</strong> to detect, investigate, and respond to threats across district environment</li>
-        <li>Lead <strong>vulnerability scanning and remediation</strong> using Nessus and OpenVAS, reducing critical security findings and improving overall security posture</li>
-        <li>Designed and delivered <strong>security awareness training</strong> and phishing simulation campaigns for 500+ staff, increasing phishing report rates district-wide</li>
-        <li>Authored <strong>incident response procedures, SOC workflows, and compliance policies</strong> to support audit readiness and operational standardization</li>
-        <li>Manage endpoint protection and patch management across Windows and Linux systems, ensuring consistent security coverage</li>
+        <li>Daily monitoring and triage of security alerts in <strong>Microsoft Sentinel</strong> and <strong>CrowdStrike Falcon</strong>, driving incidents through the full response lifecycle — detection, containment, recovery, and post-incident review</li>
+        <li>Built and run a <strong>security awareness training program for 500+ staff</strong> including phishing simulations; first campaign cycle increased phishing report rates <strong>35% district-wide</strong>, cutting exposure to credential-harvesting attacks</li>
+        <li>Handle <strong>endpoint protection and patch management</strong> across Windows and Linux systems, keeping coverage consistent and minimizing the window of exposure to known CVEs</li>
       </ul>
     </div>
 
@@ -688,8 +936,8 @@
       <div class="exp-role">IT Support Associate</div>
       <div class="exp-date">[2022-06 → 2023-03] // Dallas, TX</div>
       <ul class="exp-bullets">
-        <li>Delivered <strong>global technical support</strong> in a high-volume environment, managing <strong>15–25 concurrent tickets</strong> while consistently exceeding SLA and CSAT targets</li>
-        <li>Diagnosed and resolved complex <strong>hardware, software, and network issues</strong> across Windows, macOS, and Linux systems</li>
+        <li>Provided <strong>global IT support</strong> in a fast-moving, high-volume environment, managing <strong>15–25 concurrent tickets daily</strong> while consistently hitting SLA targets and maintaining strong CSAT scores</li>
+        <li>Diagnosed and resolved <strong>hardware, software, and network issues</strong> across Windows, macOS, and Linux under time pressure — sharpening systematic troubleshooting and clear communication under stress</li>
       </ul>
     </div>
 
@@ -698,8 +946,9 @@
       <div class="exp-role">IT Systems Technician</div>
       <div class="exp-date">[2020-12 → 2022-02] // Dallas, TX</div>
       <ul class="exp-bullets">
-        <li>Conducted <strong>security assessments and system audits</strong>, identifying vulnerabilities and misconfigurations across client environments</li>
-        <li>Implemented <strong>patch management processes</strong> across Windows and Linux systems, reducing exposure to known CVEs</li>
+        <li>Conducted <strong>security assessments and system audits</strong> for client environments, identifying misconfigurations and unpatched vulnerabilities before they became incidents</li>
+        <li>Implemented <strong>patch management workflows</strong> across Windows and Linux systems, cutting client exposure to known CVEs and improving baseline security posture</li>
+        <li>Increased customer satisfaction by maintaining <strong>SLA remediation times 10–15% below</strong> the required action window</li>
       </ul>
     </div>
   </div>
@@ -709,7 +958,7 @@
 <section id="projects">
   <div class="container">
     <div class="section-header">
-      <span class="section-tag">03</span>
+      <span class="section-tag">04</span>
       <h2 class="section-title glitch">ACTIVE OPERATIONS</h2>
       <div class="section-line"></div>
     </div>
@@ -717,48 +966,49 @@
 
       <div class="project-card">
         <div class="project-scan"></div>
-        <div class="project-status">● DEPLOYED</div>
+        <div class="project-status">● SOC TOOLING</div>
         <div class="project-name">LogDoc</div>
-        <div class="project-desc">AI-driven log triage tool built in Python. Automatically summarizes and prioritizes security log events to slash analyst alert fatigue using LLM reasoning.</div>
-        <a href="https://github.com/errmorra/LogDoc" target="_blank" class="project-link">⌥ github.com/errmorra/LogDoc</a>
+        <div class="project-desc">Python/Streamlit SIEM-augmentation tool that ingests raw logs (CSV, JSON, Syslog), enriches events with <strong style="color:var(--yellow)">AbuseIPDB / VirusTotal</strong> threat intel, scores alerts via a weighted composite risk formula, clusters similar events with K-Means, and generates plain-English AI incident narratives — reducing thousands of log lines to an analyst-ready queue.</div>
+        <a href="https://github.com/errmorra/LogDoc" target="_blank" rel="noopener" class="project-link">⌥ github.com/errmorra/LogDoc</a>
       </div>
 
       <div class="project-card">
         <div class="project-scan" style="animation-delay: 1s;"></div>
-        <div class="project-status">● DEPLOYED</div>
-        <div class="project-name">gumshoe-report</div>
-        <div class="project-desc">Automated insider threat detection and reporting pipeline. Surfaces anomalous user behavior patterns and auto-generates investigation reports.</div>
-        <a href="https://github.com/errmorra/gumshoe-report" target="_blank" class="project-link">⌥ github.com/errmorra/gumshoe-report</a>
+        <div class="project-status" style="border-color: var(--cyan); color: var(--cyan);">◇ GRC / TRAINING</div>
+        <div class="project-name">IR_Sim</div>
+        <div class="project-desc">Python GUI incident-response tabletop simulator for GRC and IR training. <strong style="color:var(--yellow)">20 MITRE ATT&CK v14 scenarios</strong> (100 injects, 51 technique IDs) across the NIST SP 800-61 r2 lifecycle, with three-axis live scoring and Markdown reports citing HIPAA, GDPR, PCI DSS, NIST CSF 2.0, and CMMC L2.</div>
+        <a href="https://github.com/errmorra/IR_Sim" target="_blank" rel="noopener" class="project-link">⌥ github.com/errmorra/IR_Sim</a>
       </div>
 
       <div class="project-card">
         <div class="project-scan" style="animation-delay: 0.5s;"></div>
-        <div class="project-status" style="border-color: var(--red); color: var(--red);">◉ ACTIVE DECEPTION</div>
-        <div class="project-name">SpecterKeys</div>
-        <div class="project-desc">Honeypot token deployment tool. Plants fake AWS credentials (honey tokens) across S3 buckets, wikis, repos, and .env files to detect unauthorized access.</div>
-        <a href="https://github.com/errmorra/SpecterKeys" target="_blank" class="project-link">⌥ github.com/errmorra/SpecterKeys</a>
+        <div class="project-status" style="border-color: var(--cyan); color: var(--cyan);">◇ COMPLIANCE</div>
+        <div class="project-name">NIST_CMMC_Readiness</div>
+        <div class="project-desc">Next.js/React crosswalk and readiness tool covering all <strong style="color:var(--yellow)">110 NIST SP 800-171 Rev 2 controls</strong> mapped 1:1 to CMMC Level 2 across 14 families. Real-time compliance tracking, technical/plain-English toggle for stakeholders, global search, and JSON export suitable for SSP appendices.</div>
+        <a href="https://github.com/errmorra/NIST_CMMC_Readiness" target="_blank" rel="noopener" class="project-link">⌥ github.com/errmorra/NIST_CMMC_Readiness</a>
       </div>
 
       <div class="project-card">
         <div class="project-scan" style="animation-delay: 1.5s;"></div>
-        <div class="project-status" style="border-color: var(--yellow); color: var(--yellow);">⚠ DAST SCANNER</div>
-        <div class="project-name">InjectorSQL</div>
-        <div class="project-desc">Dynamic Application Security Testing tool to automate SQL injection vulnerability discovery in web applications. For authorized testing only.</div>
-        <a href="https://github.com/errmorra/InjectorSQL" target="_blank" class="project-link">⌥ github.com/errmorra/InjectorSQL</a>
+        <div class="project-status">● INSIDER THREAT</div>
+        <div class="project-name">GumShoe Report</div>
+        <div class="project-desc">Python CLI that aggregates 24h of user activity across Active Directory, web proxy, badge access, and print logs; scores behavior against <strong style="color:var(--yellow)">12 configurable insider-threat rules</strong>; and generates a color-coded terminal report plus a PDF case file. Supports SIEM JSON export and live AD / CASB / PACS connectors.</div>
+        <a href="https://github.com/errmorra/gumshoe-report" target="_blank" rel="noopener" class="project-link">⌥ github.com/errmorra/gumshoe-report</a>
       </div>
 
-      <div class="project-card" style="grid-column: span 1;">
+      <div class="project-card">
         <div class="project-scan" style="animation-delay: 2s;"></div>
-        <div class="project-status">◈ HOME LAB</div>
-        <div class="project-name">Home SOC Lab</div>
-        <div class="project-desc">Full virtual SOC using <strong style="color:var(--yellow)">Wazuh, Kibana, Graylog,</strong> and <strong style="color:var(--yellow)">OPNSense</strong> across multiple VMs. Simulates phishing, lateral movement, and privilege escalation attacks to validate detection rules against MITRE ATT&CK.</div>
+        <div class="project-status" style="border-color: var(--red); color: var(--red);">◉ ACTIVE DECEPTION</div>
+        <div class="project-name">SpecterKeys</div>
+        <div class="project-desc">Deploys cryptographically valid but DenyAll-backed <strong style="color:var(--yellow)">AWS IAM honey tokens</strong> into high-value locations. Any usage fires a CloudWatch alarm within 60s, pages the team via SNS, and auto-disables the key via Lambda — zero false positives by design. Includes CloudFormation IaC and a full IR playbook.</div>
+        <a href="https://github.com/errmorra/SpecterKeys" target="_blank" rel="noopener" class="project-link">⌥ github.com/errmorra/SpecterKeys</a>
       </div>
 
       <div class="project-card">
         <div class="project-scan" style="animation-delay: 2.5s;"></div>
-        <div class="project-status" style="border-color: var(--cyan); color: var(--cyan);">◇ CTF LABS</div>
-        <div class="project-name">TryHackMe / HackTheBox</div>
-        <div class="project-desc">50+ labs completed covering penetration testing, malware analysis, privilege escalation, and digital forensics. Continuous skills development.</div>
+        <div class="project-status">◈ HOME LAB</div>
+        <div class="project-name">Home SOC Lab</div>
+        <div class="project-desc">Full virtual SOC using <strong style="color:var(--yellow)">Wazuh, Kibana, Graylog,</strong> and <strong style="color:var(--yellow)">OPNSense</strong> across multiple VMs. Simulates phishing, lateral movement, and privilege escalation to validate detection rules against <strong style="color:var(--yellow)">MITRE ATT&CK</strong>.</div>
       </div>
 
     </div>
@@ -769,7 +1019,7 @@
 <section id="skills">
   <div class="container">
     <div class="section-header">
-      <span class="section-tag">04</span>
+      <span class="section-tag">05</span>
       <h2 class="section-title glitch">CAPABILITY MATRIX</h2>
       <div class="section-line"></div>
     </div>
@@ -778,27 +1028,29 @@
       <div>
         <div class="skill-group-title">// Security Operations</div>
         <div class="skill-tags">
-          <span class="skill-tag">Microsoft Sentinel</span>
-          <span class="skill-tag">CrowdStrike Falcon</span>
-          <span class="skill-tag">Incident Detection &amp; Response</span>
-          <span class="skill-tag">Nessus</span>
-          <span class="skill-tag">OpenVAS</span>
-          <span class="skill-tag">Wazuh</span>
-          <span class="skill-tag">Kibana</span>
-          <span class="skill-tag">Graylog</span>
+          <span class="skill-tag">SIEM</span>
+          <span class="skill-tag">EDR</span>
+          <span class="skill-tag">Threat Detection</span>
+          <span class="skill-tag">Threat Hunting</span>
+          <span class="skill-tag">Incident Response</span>
+          <span class="skill-tag">Alert Triage</span>
           <span class="skill-tag">Log Analysis</span>
+          <span class="skill-tag">Security Monitoring</span>
+          <span class="skill-tag">Threat Intelligence</span>
+          <span class="skill-tag">Vulnerability Management</span>
+          <span class="skill-tag">Cloud Security (AWS)</span>
+          <span class="skill-tag">MITRE ATT&amp;CK</span>
+          <span class="skill-tag">Phishing Analysis</span>
           <span class="skill-tag">IAM</span>
           <span class="skill-tag">Patch Management</span>
-          <span class="skill-tag">Security Awareness Training</span>
-          <span class="skill-tag">MS Defender for Endpoint</span>
+          <span class="skill-tag">SOAR</span>
+          <span class="skill-tag">Digital Forensics</span>
         </div>
-      </div>
-
-      <div>
-        <div class="skill-group-title">// Networking &amp; Infrastructure</div>
+        <div class="skill-group-title" style="margin-top:28px;">// Networking &amp; Infrastructure</div>
         <div class="skill-tags">
           <span class="skill-tag">TCP/IP</span>
           <span class="skill-tag">DNS</span>
+          <span class="skill-tag">DHCP</span>
           <span class="skill-tag">VPN</span>
           <span class="skill-tag">Firewalls</span>
           <span class="skill-tag">IDS/IPS</span>
@@ -806,15 +1058,44 @@
           <span class="skill-tag">Nmap</span>
           <span class="skill-tag">Active Directory</span>
           <span class="skill-tag">Windows Server</span>
-          <span class="skill-tag">Linux</span>
-          <span class="skill-tag">OPNSense</span>
+          <span class="skill-tag">Linux (Ubuntu/Debian)</span>
         </div>
-        <div class="skill-group-title" style="margin-top:28px;">// Development</div>
+      </div>
+
+      <div>
+        <div class="skill-group-title">// Tools &amp; Platforms</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Microsoft Sentinel</span>
+          <span class="skill-tag">CrowdStrike Falcon</span>
+          <span class="skill-tag">MS Defender</span>
+          <span class="skill-tag">Wazuh</span>
+          <span class="skill-tag">Kibana</span>
+          <span class="skill-tag">Graylog</span>
+          <span class="skill-tag">Splunk</span>
+          <span class="skill-tag">OPNSense</span>
+          <span class="skill-tag">Nessus</span>
+          <span class="skill-tag">OpenVAS</span>
+          <span class="skill-tag">KQL</span>
+          <span class="skill-tag">AWS (CloudTrail/CloudWatch/IAM)</span>
+        </div>
+        <div class="skill-group-title" style="margin-top:28px;">// Development &amp; Automation</div>
         <div class="skill-tags">
           <span class="skill-tag">Python</span>
-          <span class="skill-tag">Bash Scripting</span>
+          <span class="skill-tag">Bash</span>
           <span class="skill-tag">Git / GitHub</span>
           <span class="skill-tag">Security Automation</span>
+        </div>
+        <div class="skill-group-title" style="margin-top:28px;">// Frameworks &amp; Compliance</div>
+        <div class="skill-tags">
+          <span class="skill-tag">MITRE ATT&amp;CK</span>
+          <span class="skill-tag">NIST CSF</span>
+          <span class="skill-tag">NIST SP 800-171</span>
+          <span class="skill-tag">CMMC L2</span>
+          <span class="skill-tag">IR Lifecycle</span>
+          <span class="skill-tag">FERPA</span>
+          <span class="skill-tag">HIPAA</span>
+          <span class="skill-tag">PCI DSS</span>
+          <span class="skill-tag">GDPR</span>
         </div>
       </div>
 
@@ -826,8 +1107,8 @@
 <section id="certs">
   <div class="container">
     <div class="section-header">
-      <span class="section-tag">05</span>
-      <h2 class="section-title glitch">CLEARANCE LEVEL</h2>
+      <span class="section-tag">06</span>
+      <h2 class="section-title glitch">CERTIFICATIONS &amp; MEMBERSHIPS</h2>
       <div class="section-line"></div>
     </div>
     <div class="certs-row">
@@ -840,12 +1121,15 @@
       <div class="cert-badge" data-cert="NET+">
         <span>CompTIA Network+<br>N10-009</span>
       </div>
+      <div class="cert-badge" data-cert="ISACA">
+        <span>North Texas Chapter<br>Member since 2025</span>
+      </div>
     </div>
 
     <!-- Education -->
     <div style="margin-top:60px;">
       <div class="section-header" style="margin-bottom:24px;">
-        <span class="section-tag">06</span>
+        <span class="section-tag">07</span>
         <h2 class="section-title">EDUCATION</h2>
         <div class="section-line"></div>
       </div>
@@ -873,7 +1157,7 @@
 <section id="terminal">
   <div class="container">
     <div class="section-header">
-      <span class="section-tag">07</span>
+      <span class="section-tag">08</span>
       <h2 class="section-title glitch">SECURE SHELL</h2>
       <div class="section-line"></div>
     </div>
@@ -968,7 +1252,7 @@ document.addEventListener('mouseup', () => cursor.style.transform = 'translate(-
     ['ok',   'Microsoft Sentinel workspace: ONLINE'],
     ['err',  'ALERT: Suspicious login attempt blocked [192.168.66.6]'],
     ['ok',   'Canary tokens deployed across honeypot network'],
-    ['ok',   'Python security tooling: LogDoc, SpecterKeys, InjectorSQL — READY'],
+    ['ok',   'Python security tooling: LogDoc, IR_Sim, GumShoe, SpecterKeys — READY'],
     ['ok',   'Incident response playbooks: LOADED (MITRE-aligned)'],
     ['ok',   'Portfolio integrity check: SHA256 VERIFIED'],
     ['ok',   'Booting eric@portfolio — WELCOME OPERATOR'],
@@ -999,7 +1283,7 @@ document.addEventListener('mouseup', () => cursor.style.transform = 'translate(-
 // ── TYPING ANIMATION ──
 function startTyping() {
   const el = document.getElementById('typing-output');
-  const text = `Security-focused IT professional with 4+ years of experience in SIEM monitoring, endpoint detection & response (EDR), and incident response. Currently protecting a K-12 school district environment using Microsoft Sentinel and CrowdStrike Falcon, with hands-on ownership of vulnerability management, security awareness training, and compliance documentation. Builds custom security tooling in Python (published on GitHub) and actively develops skills through lab environments. Seeking a SOC Analyst or IT Risk/Compliance role to apply technical expertise at scale.`;
+  const text = `Cybersecurity specialist with 4+ years protecting environments, currently delivering IT and security support for a K-12 school district. Runs daily alert triage in Microsoft Sentinel and CrowdStrike Falcon, builds detection tooling in Python, and owns the full incident response lifecycle from initial alert to post-incident review. Outside of work, builds open-source security tools and runs a home SOC lab simulating adversary techniques mapped to MITRE ATT&CK. North Texas ISACA member since 2025. Seeking a SOC Analyst or GRC Analyst role to contribute technical and compliance expertise to a security team.`;
   let i = 0;
   el.innerHTML = '<span class="caret"></span>';
   const iv = setInterval(() => {
@@ -1029,14 +1313,17 @@ window.addEventListener('scroll', () => {
 
   const commands = {
     help: () => `<span style="color:var(--cyan)">Available commands:</span>
-<span style="color:var(--yellow)">  whoami</span>     — Operator profile
-<span style="color:var(--yellow)">  skills</span>     — List technical capabilities
-<span style="color:var(--yellow)">  projects</span>   — List active operations
-<span style="color:var(--yellow)">  contact</span>    — Contact information
-<span style="color:var(--yellow)">  certs</span>      — View certifications
-<span style="color:var(--yellow)">  hack</span>       — Initiate intrusion sequence [demo]
-<span style="color:var(--yellow)">  clear</span>      — Clear terminal
-<span style="color:var(--yellow)">  status</span>     — System status`,
+<span style="color:var(--yellow)">  whoami</span>      — Operator profile
+<span style="color:var(--yellow)">  skills</span>      — List technical capabilities
+<span style="color:var(--yellow)">  projects</span>    — List open-source security tools
+<span style="color:var(--yellow)">  grc</span>         — Governance, risk & compliance focus
+<span style="color:var(--yellow)">  contact</span>     — Contact information
+<span style="color:var(--yellow)">  certs</span>       — Certifications & memberships
+<span style="color:var(--yellow)">  resume</span>      — Open print / save-as-PDF view
+<span style="color:var(--yellow)">  theme</span>       — Toggle hacker / recruiter mode
+<span style="color:var(--yellow)">  hack</span>        — Initiate intrusion sequence [demo]
+<span style="color:var(--yellow)">  status</span>      — System status
+<span style="color:var(--yellow)">  clear</span>       — Clear terminal`,
 
     whoami: () => `<span style="color:var(--green)">ERIC MORALES</span>
 Role    : IT Specialist (Security Focus) → Target: SOC Analyst
@@ -1061,23 +1348,39 @@ Motto   : "Assume breach. Hunt threats. Document everything."`,
   ■ Bash scripting
   ■ Git/GitHub`,
 
-    projects: () => `<span style="color:var(--green)">ACTIVE OPERATIONS:</span>
-<span style="color:var(--yellow)">LogDoc</span>         AI-driven log triage tool → github.com/errmorra/LogDoc
-<span style="color:var(--yellow)">gumshoe-report</span> Insider threat detection  → github.com/errmorra/gumshoe-report
-<span style="color:var(--yellow)">SpecterKeys</span>    Honeypot canary tokens    → github.com/errmorra/SpecterKeys
-<span style="color:var(--yellow)">InjectorSQL</span>    DAST SQL injection scanner → github.com/errmorra/InjectorSQL
-<span style="color:var(--yellow)">Home SOC Lab</span>   Wazuh + Kibana + OPNSense  → Private`,
+    projects: () => `<span style="color:var(--green)">OPEN-SOURCE SECURITY TOOLS:</span>
+<span style="color:var(--yellow)">LogDoc</span>              AI-driven log triage (Python/Streamlit) → github.com/errmorra/LogDoc
+<span style="color:var(--yellow)">IR_Sim</span>              IR tabletop simulator, 20 ATT&CK scenarios → github.com/errmorra/IR_Sim
+<span style="color:var(--yellow)">NIST_CMMC_Readiness</span> 110 NIST 800-171 → CMMC L2 crosswalk → github.com/errmorra/NIST_CMMC_Readiness
+<span style="color:var(--yellow)">GumShoe Report</span>      Insider threat investigation CLI → github.com/errmorra/gumshoe-report
+<span style="color:var(--yellow)">SpecterKeys</span>         AWS honey-token deception system → github.com/errmorra/SpecterKeys`,
+
+    grc: () => `<span style="color:var(--cyan)">GOVERNANCE · RISK · COMPLIANCE</span>
+  Frameworks : NIST CSF 2.0, NIST SP 800-171 Rev 2, CMMC Level 2
+  Regulatory : HIPAA, GDPR, PCI DSS, FERPA
+  Lifecycle  : NIST SP 800-61 r2 Incident Response
+  Tooling    : IR_Sim (tabletop training), NIST_CMMC_Readiness (crosswalk)
+  Output     : Policies, IR procedures, SSP-ready exports`,
 
     contact: () => `<span style="color:var(--green)">CONTACT CHANNELS:</span>
   Email    : emora3030@gmail.com
   LinkedIn : linkedin.com/in/eric-morales-cyber
   GitHub   : github.com/errmorra
-  Portfolio: errmorra.github.io/resume`,
+  Location : Celina, TX`,
 
-    certs: () => `<span style="color:var(--cyan)">CERTIFICATIONS VERIFIED:</span>
+    certs: () => `<span style="color:var(--cyan)">CERTIFICATIONS & MEMBERSHIPS:</span>
   [✓] CompTIA CySA+     (CS0-003) — Cybersecurity Analyst
   [✓] CompTIA Security+ (SY0-701) — Security Practitioner
-  [✓] CompTIA Network+  (N10-009) — Network Infrastructure`,
+  [✓] CompTIA Network+  (N10-009) — Network Infrastructure
+  [★] ISACA — North Texas Chapter — Member since 2025`,
+
+    memberships: () => `<span style="color:var(--cyan)">PROFESSIONAL MEMBERSHIPS:</span>
+  [★] ISACA — North Texas Chapter — Member since 2025`,
+
+    resume: () => { setTimeout(() => window.print(), 300); return '<span style="color:var(--green)">Opening résumé view… use your browser dialog to Save as PDF.</span>'; },
+
+    theme: () => { document.getElementById('theme-toggle').click(); return '<span style="color:var(--green)">Theme toggled. (hacker ⇄ recruiter)</span>'; },
+    pro: () => commands.theme(),
 
     status: () => `<span style="color:var(--green)">SYSTEM STATUS :: ALL GREEN</span>
   Threat Level   : LOW
@@ -1165,6 +1468,82 @@ Motto   : "Assume breach. Hunt threats. Document everything."`,
 
   // Click anywhere in terminal to focus
   document.querySelector('.terminal-body')?.addEventListener('click', () => input.focus());
+})();
+
+// ── RECRUITER / PROFESSIONAL MODE TOGGLE ──
+(function() {
+  const body = document.body;
+  const btn = document.getElementById('theme-toggle');
+  const icon = document.getElementById('theme-icon');
+  const label = document.getElementById('theme-label');
+
+  function apply(pro) {
+    body.classList.toggle('pro', pro);
+    icon.textContent = pro ? '💀' : '🛡';
+    label.textContent = pro ? 'HACKER MODE' : 'RECRUITER MODE';
+    btn.setAttribute('aria-pressed', String(pro));
+    try { localStorage.setItem('em-theme', pro ? 'pro' : 'hacker'); } catch (e) {}
+  }
+
+  // restore saved preference
+  let saved = null;
+  try { saved = localStorage.getItem('em-theme'); } catch (e) {}
+  if (saved === 'pro') apply(true);
+
+  btn.addEventListener('click', () => apply(!body.classList.contains('pro')));
+})();
+
+// ── RÉSUMÉ PRINT / DOWNLOAD ──
+(function() {
+  const print = () => window.print();
+  document.getElementById('resume-btn')?.addEventListener('click', print);
+  document.getElementById('hero-resume')?.addEventListener('click', e => { e.preventDefault(); print(); });
+})();
+
+// ── COPY EMAIL ──
+(function() {
+  const btn = document.getElementById('copy-email-btn');
+  const toast = document.getElementById('copy-toast');
+  const email = 'emora3030@gmail.com';
+  btn?.addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText(email);
+    } catch (e) {
+      const t = document.createElement('textarea');
+      t.value = email; document.body.appendChild(t); t.select();
+      try { document.execCommand('copy'); } catch (_) {}
+      document.body.removeChild(t);
+    }
+    toast.textContent = 'COPIED: ' + email;
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 1800);
+  });
+})();
+
+// ── ANIMATED COUNT-UP METRICS ──
+(function() {
+  const els = document.querySelectorAll('.metric-value[data-count]');
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function run(el) {
+    const target = parseFloat(el.dataset.count);
+    const suffix = el.dataset.suffix || '';
+    if (reduce) { el.textContent = target + suffix; return; }
+    const dur = 1200, start = performance.now();
+    function step(now) {
+      const p = Math.min((now - start) / dur, 1);
+      const eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = Math.round(target * eased) + suffix;
+      if (p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  if (!('IntersectionObserver' in window)) { els.forEach(run); return; }
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(en => {
+      if (en.isIntersecting) { run(en.target); io.unobserve(en.target); }
+    });
+  }, { threshold: 0.4 });
+  els.forEach(el => io.observe(el));
 })();
 </script>
 </body>
